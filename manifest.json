@@ -1,0 +1,22 @@
+{
+	"manifest_version": 3,
+	"name": "Readme Later",
+	"version": "1.0",
+	"description": "ブックマークを一元管理して通知でお知らせする拡張機能",
+	"icons": {
+		"16": "images/icon16x16.png",
+		"32": "images/icon32x32.png",
+		"48": "images/icon48x48.png",
+		"128": "images/icon128x128.png"
+	},
+	"content_scripts": [
+		{
+			"js": ["scripts/content.js"],
+			"matches": [
+				"https://liginc.co.jp/*",
+				"https://dev.classmethod.jp/articles/*"
+			]
+		}
+	],
+	"permissions": ["notifications", "storage", "tabs"]
+}
